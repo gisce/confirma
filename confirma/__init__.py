@@ -62,7 +62,7 @@ class ConFirmaClient(object):
             "datos": datos
         }
         return self.session.post(
-            url, cabecera, json=json_data
+            url, cabecera, json=json_data, headers=cabecera
         ).json()
 
     def check_signature_status(self, cabecera, encriptado):
