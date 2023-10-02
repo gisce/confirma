@@ -3,10 +3,7 @@ import requests
 
 
 class Document(object):
-    read_required = True
-    template_type = None
-    template_reference = None
-    template_code = None
+    content = None
 
     def __init__(self, **attrs):
         for k, v in attrs.items():
@@ -17,7 +14,7 @@ class Document(object):
         :return: A document serialized in JSON
         :rtype: dict
         """
-        return 'data:application/pdf;base64,' + self.template_code
+        return 'data:application/pdf;base64,' + self.content
 
 
 class Base64Document(Document):
