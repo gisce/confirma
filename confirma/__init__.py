@@ -1,6 +1,6 @@
 # coding: utf-8
 import requests
-
+import json
 
 class Document(object):
     content = None
@@ -50,14 +50,15 @@ class ConFirmaClient(object):
         :rtype: dict
         """
         url = '/'.join([self.url, 'ws_API.php'])
-        json_data = {
+        data = {
             "canal": canal,
             "tipo": tipo,
             "tipofirma": tipofirma,
             "datos": datos
         }
+        data = json.dumps(data)
         return self.session.post(
-            url, cabecera, json=json_data, headers=cabecera
+            url, data=data, headers=cabecera
         ).json()
 
     def check_signature_status(self, cabecera, encriptado):
