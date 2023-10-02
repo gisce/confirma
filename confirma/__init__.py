@@ -17,9 +17,7 @@ class Document(object):
         :return: A document serialized in JSON
         :rtype: dict
         """
-        return {
-            'data:application/pdf;base64,' + self.template_code
-        }
+        return 'data:application/pdf;base64,' + self.template_code
 
 
 class Base64Document(Document):
