@@ -63,9 +63,10 @@ class ConFirmaClient(object):
 
     def check_signature_status(self, cabecera, encriptado):
         url = '/'.join([self.url, 'ws_API_status.php'])
-        json_data = {
+        data = {
             'encriptado': encriptado,
         }
+        data = json.dumps(data)
         return self.session.post(
-            url, cabecera, json=json_data
+            url, data=data, headers=cabecera
         ).json()
