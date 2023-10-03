@@ -67,6 +67,6 @@ class ConFirmaClient(object):
             'encriptado': encriptado,
         }
         data = json.dumps(data)
-        return self.session.post(
+        return self.session.get(
             url, data=data, headers=cabecera
         ).json()
