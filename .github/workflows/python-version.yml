@@ -57,5 +57,5 @@ jobs:
           fi
           if [[ $VERSION_TYPE != false ]]; then
             bump2version $VERSION_TYPE --tag --commit -m "Bump to v{new_version}" setup.py
-            git push origin master --tags
+            git push origin confirma_signature --tags
           fi
