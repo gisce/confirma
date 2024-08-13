@@ -1,7 +1,7 @@
-name: GISCE_FaceLib_VERION
+name: GISCE_Confirma_VERION
 on:
   push:
-    branches: [ master ]
+    branches: [ confirma_signature ]
 jobs:
   bump:
     runs-on: ubuntu-latest
