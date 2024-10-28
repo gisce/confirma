@@ -5,7 +5,7 @@ with open('requirements.txt', 'r') as f:
 
 setup(
     name='confirma',
-    version='0.2.1',
+    version='0.2.2',
     packages=find_packages(),
     url='https://github.com/gisce/confirma',
     license='MIT',
