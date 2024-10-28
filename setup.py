@@ -1,8 +1,5 @@
 from setuptools import setup, find_packages
 
-with open('requirements.txt', 'r') as f:
-    INSTALL_REQUIRES = f.readlines()
-
 setup(
     name='confirma',
     version='0.2.2',
@@ -13,5 +10,7 @@ setup(
     long_description='''Send Documents to ConFirma service package''',
     author_email='devel@gisce.net',
     description='Send Documents to ConFirma service',
-    install_requires=INSTALL_REQUIRES
+    install_requires=[
+        'requests'
+    ],
 )
