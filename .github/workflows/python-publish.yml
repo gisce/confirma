@@ -22,6 +22,7 @@ jobs:
           strip_v: false
       - name: Run setup
         run: |
+          pip install -e .
           python setup.py sdist
       - name: Creating a realease/pre-release
         id: create_release
